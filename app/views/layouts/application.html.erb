@@ -10,6 +10,14 @@
   </head>
 
   <body>
+
+      <% if current_client_devise %>
+          <%= link_to 'Logout', destroy_client_devise_session_path, method: :delete %>
+      <% else %>
+          <%= link_to 'Login', new_client_devise_session_path %>
+      <% end %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
