@@ -10,9 +10,17 @@
   </head>
 
   <body>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 
       <% if current_client_devise %>
           <%= link_to 'Logout', destroy_client_devise_session_path, method: :delete %>
+            <% if current_client_devise%>
+              <%= link_to 'Admin', admin_root_path %>
+            <% else %>
+            <% end %>
       <% else %>
           <%= link_to 'Login', new_client_devise_session_path %>
       <% end %>
