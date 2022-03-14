@@ -14,5 +14,11 @@
  *= require bootstrap/scss/bootstrap
  *= require_tree .
  *= require_self
+ *= require scaffolds
  */
  @import "bootstrap";
+
+body {
+    font-family: raleway, sans-serif;
+    background-color: black;
+}
