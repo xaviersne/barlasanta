@@ -5,4 +5,5 @@ class ClientDevise < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   enum role:[:client, :admin]
+  has_many :reserve_tables
 end
