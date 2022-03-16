@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_15_004652) do
+ActiveRecord::Schema.define(version: 2022_03_16_231052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,18 @@ ActiveRecord::Schema.define(version: 2022_03_15_004652) do
     t.index ["reset_password_token"], name: "index_client_devises_on_reset_password_token", unique: true
   end
 
+  create_table "reserve_rooms", force: :cascade do |t|
+    t.integer "people"
+    t.date "date"
+    t.time "time"
+    t.text "observations"
+    t.integer "status"
+    t.bigint "client_devise_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_devise_id"], name: "index_reserve_rooms_on_client_devise_id"
+  end
+
   create_table "reserve_tables", force: :cascade do |t|
     t.integer "people"
     t.date "date"
@@ -54,5 +66,6 @@ ActiveRecord::Schema.define(version: 2022_03_15_004652) do
     t.index ["client_devise_id"], name: "index_reserve_tables_on_client_devise_id"
   end
 
+  add_foreign_key "reserve_rooms", "client_devises"
   add_foreign_key "reserve_tables", "client_devises"
 end
