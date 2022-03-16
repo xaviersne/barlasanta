@@ -27,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <% if current_client_devise %>
-            <% if current_client_devise%>
+            <% if current_client_devise.admin?%>
                 <a class="nav-link" href="#"> <%= link_to 'Admin', admin_root_path %></a>
             <% else %>
             <% end %>

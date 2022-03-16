@@ -2,13 +2,13 @@
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <%= image_tag("b.jpg", {:style => "d-block;"}) %>
+      <%= image_tag("b.jpg", class: 'img-fluid') %>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-      <%= image_tag("c.jpg", {:style => "d-block;"}) %>
+      <%= image_tag("c.jpg") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("d.jpg", {:style => "d-block;"}) %>
+      <%= image_tag("d.jpg") %>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -22,42 +22,9 @@
 </div>
 </div>
 
-<div class="container-form">
-  <div class="row align-items-start">
-    <div class="col">
-    </div>
-    <div class="col border border-dark rounded-3 mb-5">
-      <h2 class="text-white">Realiza tu Reserva</h2>
-        <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
-        </div>
-      </div>
-        <div class="row">
-          <div class="col">
-            <input type="email" class="form-control mt-1" placeholder="Email" aria-label="Email">
-          </div>
-        </div>
-      <select class="form-select mt-2" aria-label="Default select example">
-        <option selected>Selecciona Mesa o Salon</option>
-        <option value="1">Mesa</option>
-        <option value="2">Salon</option>
-      </select>
-      <select class="form-select mt-2" aria-label="Default select example">
-        <option selected>Cantidad de personas</option>
-        <option value="1">1-4</option>
-        <option value="2">5-10</option>
-        <option value="2">11-20</option>
-      </select>
-      <button type="submit" class="btn btn-primary my-2">Reservar</button>
 
-    </div>
-    <div class="col">
-    </div>
-</div>
-
-
-
+<% if (current_client_devise)%>
+<%= render 'login'%>
+<% else %>
+<%= render 'logout'%>
+<% end %>
