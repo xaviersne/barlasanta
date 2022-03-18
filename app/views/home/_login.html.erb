@@ -1,36 +1,44 @@
 <div class="container-form">
   <div class="row align-items-start">
-    <div class="col">
-    </div>
-    <div class="col border border-dark rounded-3 mb-5">
-      <h2 class="text-dark">Realiza tu Reserva</h2>
-        <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
-        </div>
-      </div>
-        <div class="row">
-          <div class="col">
-            <input type="email" class="form-control mt-1" placeholder="Email" aria-label="Email">
-          </div>
-        </div>
-      <select class="form-select mt-2" aria-label="Default select example">
-        <option selected>Selecciona Mesa o Salon</option>
-        <option value="1">Mesa</option>
-        <option value="2">Salon</option>
-      </select>
-      <select class="form-select mt-2" aria-label="Default select example">
-        <option selected>Cantidad de personas</option>
-        <option value="1">1-4</option>
-        <option value="2">5-10</option>
-        <option value="2">11-20</option>
-      </select>
-      <button type="submit" class="btn btn-primary my-2">Reservar</button>
+<!--primeracolumna-->
+    <div class="col-4">
+      <ul>
+        <li><a href="#home">Santo Inicio</a></li>
+        <li><a href="#news">Santo Bar</a></li>
+        <li><a href="#contact">Santo Menu</a></li>
+        <li><a href="#about">Nosotros</a></li>
+      </ul>
 
     </div>
-    <div class="col">
+<!--segunda columna-->
+    <div class="col-4 border border-dark rounded-3 mb-5">
+      <%= form_tag(reserve_create_path) do %>
+          <h2 class="text-light">Realiza tu Reserva</h2>
+            <div class="row">
+                <input type="text" class="form-control" name="name" placeholder="Nombre" aria-label="First name">
+                <input type="text" class="form-control mt-1" name="lastname" placeholder="Apellido" aria-label="Last name">
+                <input type="email" class="form-control mt-1" name="email" placeholder="Email" aria-label="Email">
+                <input type="time" class="form-control mt-1" name="time" placeholder="Hora" aria-label="time">
+                <input type="date" class="form-control mt-1" name="date" placeholder="Fecha" aria-label="date">
+                <select class="form-select mt-2" name="firstselect" aria-label="Default select example">
+                  <option selected >Selecciona Mesa o Salon</option>
+                  <option value="1">Mesa</option>
+                  <option value="2">Salon</option>
+                </select>
+                <select class="form-select mt-2" name="secondselect" aria-label="Default select example">
+                  <option selected>Cantidad de personas</option>
+                  <option value="1">1-4</option>
+                  <option value="2">5-10</option>
+                  <option value="3">11-20</option>
+                </select>
+                <button type="submit" class="btn btn-primary my-2">Reservar</button>
+            </end>
+        </div>
+      <% end %>
     </div>
+      <!--3columna-->
+      <div class="col-4">
+        <%= image_tag("a.jpg",:size => "400x400") %>
+      </div>
+  </div>
 </div>
