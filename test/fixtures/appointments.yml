@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2022-03-18
+  time: 2022-03-18 14:38:34
+  people: 1
+  client_devise: one
+
+two:
+  date: 2022-03-18
+  time: 2022-03-18 14:38:34
+  people: 1
+  client_devise: two

@@ -7,4 +7,5 @@ class ClientDevise < ApplicationRecord
   enum role:[:client, :admin]
   has_many :reserve_tables
   has_many :reserve_rooms
+  has_many :appointments
 end

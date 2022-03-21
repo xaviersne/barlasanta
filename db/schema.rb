@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_16_231052) do
+ActiveRecord::Schema.define(version: 2022_03_18_173834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 2022_03_16_231052) do
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
     t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.date "date"
+    t.time "time"
+    t.integer "people"
+    t.bigint "client_devise_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_devise_id"], name: "index_appointments_on_client_devise_id"
   end
 
   create_table "client_devises", force: :cascade do |t|
@@ -66,6 +76,18 @@ ActiveRecord::Schema.define(version: 2022_03_16_231052) do
     t.index ["client_devise_id"], name: "index_reserve_tables_on_client_devise_id"
   end
 
+  create_table "reserves", force: :cascade do |t|
+    t.date "date"
+    t.time "time"
+    t.integer "people"
+    t.bigint "client_devise_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_devise_id"], name: "index_reserves_on_client_devise_id"
+  end
+
+  add_foreign_key "appointments", "client_devises"
   add_foreign_key "reserve_rooms", "client_devises"
   add_foreign_key "reserve_tables", "client_devises"
+  add_foreign_key "reserves", "client_devises"
 end
