@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @prueba.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @prueba.time %>
+</p>
+
+<p>
+  <strong>People:</strong>
+  <%= @prueba.people %>
+</p>
+
+<%= link_to 'Edit', edit_prueba_path(@prueba) %> |
+<%= link_to 'Back', pruebas_path %>

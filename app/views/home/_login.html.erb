@@ -1,4 +1,4 @@
-<div class="container-form">
+<div class="container-form mt-3">
   <div class="row align-items-start">
 <!--primeracolumna-->
     <div class="col-4">
@@ -11,7 +11,7 @@
 
     </div>
 <!--segunda columna-->
-    <div class="col-4 border border-dark rounded-3 mb-5">
+    <div class="col-4 border border-dark rounded-3">
       <%= form_tag(reserve_create_path) do %>
           <h2 class="text-light">Realiza tu Reserva</h2>
             <div class="row">
@@ -36,12 +36,10 @@
             </end>
         </div>
       <% end %>
-
-
+      
     </div>
       <!--3columna-->
       <div class="col-4">
-        <%= image_tag("a.jpg",:size => "400x400") %>
       </div>
   </div>
 </div>

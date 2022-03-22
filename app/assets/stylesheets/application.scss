@@ -22,14 +22,6 @@ body {
     font-family: raleway, sans-serif;
     background-color: #040404;
 }
-.carousel-inner, image {
-    height: 200px;
-    width: 100%;
-    margin-top: -60px;
-}
-.container-form {
-    padding-top: 2em;
-}
 
 .navbar {
     background-color: #000;
@@ -39,7 +31,7 @@ body {
 
 footer {
     background-color: #000;
-    
+    margin-top: 5em;
 }
 
 ul {
@@ -64,18 +56,13 @@ ul {
     color: #000;
   }
 
-  .carousel-item > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    height: 40rem;
-    margin: 0 auto;
-  }
-
   p {
      font-weight: 10px;
      color: #fff;
      font-size: small;
+  }
+
+  .container-forma {
+    margin-top: -35px;
+    margin-bottom: 3em;
   }
