@@ -9,7 +9,7 @@ class ReserveController < ApplicationController
   end
   def index
     @reserves = ReserveTable.all
-    format.html { redirect_to @reserve_path, notice: “Reserve was successfully created.” }
+    #format.html { redirect_to @reserve_path, notice: “Reserve was successfully created.” }
   end
 
 end
