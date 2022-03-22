@@ -1,17 +1,21 @@
-<div class="container-form mt-3">
+<div class="container-form mt-3 mb-5">
   <div class="row align-items-start">
 <!--primeracolumna-->
-    <div class="col-4">
+    <div class="col mx-5">
+      <%= image_tag("a.jpg",:size => "200x200") %>
+  
       <ul>
         <li><a href="#home">Santo Inicio</a></li>
         <li><a href="#news">Santo Bar</a></li>
         <li><a href="#contact">Santo Menu</a></li>
-        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#C9">Galeria</a></li>
+        <li><p><a href="#C10">Ubicanos</a></p></li>
       </ul>
+
 
     </div>
 <!--segunda columna-->
-    <div class="col-4 border border-dark rounded-3">
+    <div class="col border border-dark rounded-3">
       <%= form_tag(reserve_create_path) do %>
           <h2 class="text-light">Realiza tu Reserva</h2>
             <div class="row">
@@ -39,7 +43,36 @@
       
     </div>
       <!--3columna-->
-      <div class="col-4">
+      <div class="col">
+ 
       </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+          <h2 class="text-white text-center mt-2">Ubicanos</h2>
+      <iframe id="C10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.3519889323125!2d-70.62353558537379!3d-33.44013498077682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf7fe3ff3669%3A0x1040ce06ad3c2fe4!2sAv.%20Francisco%20Bilbao%20890%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1647914122623!5m2!1ses-419!2scl" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe width="350" height="415" src="https://www.youtube.com/embed/-9lcGzq1pb8?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+        <div class="col-8">
+          <h1 class="text-white text-center" id="C9">Galeria</h1>
+          <div class="row">
+            <div class="col-6">
+                  <%= image_tag("l.jpg",:size => "400x400") %>
+                  <%= image_tag("c.jpg",:size => "400x400") %>
+                  <%= image_tag("d.jpg",:size => "400x400") %>
+                  <%= image_tag("j.jpg",:size => "400x400") %>
+            </div>
+            <div class="col-6">
+                  <%= image_tag("f.jpg",:size => "400x400") %>
+                  <%= image_tag("g.jpg",:size => "400x400") %>
+                  <%= image_tag("h.jpg",:size => "400x400") %>
+                  <%= image_tag("i.jpg",:size => "400x400") %>
+            </div>
+          </div>
+        </div>
   </div>
 </div>

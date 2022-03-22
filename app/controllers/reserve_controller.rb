@@ -3,12 +3,13 @@ class ReserveController < ApplicationController
     if params[:firstselect] == '1'
       ReserveTable.create(people: params[:secondselect], date: params[:date], time: params[:time], client_devise_id: current_client_devise.id)
     else
-      ReserveRoom.create(people: params[:secondselect], date: params[:date], time: params[:time])
+      ReserveRoom.create(people: params[:secondselect], date: params[:date], time: params[:time], client_devise_id: current_client_devise.id)
     end
     redirect_to root_url, :notice => "Reserva realizada!"
   end
   def index
     @reserves = ReserveTable.all
+    format.html { redirect_to @reserve_path, notice: “Reserve was successfully created.” }
   end
 
 end
