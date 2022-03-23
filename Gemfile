@@ -19,7 +19,10 @@ gem 'activeadmin'
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery'
 gem 'popper'
-# Use CoffeeScript for .coffee assets and views
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
