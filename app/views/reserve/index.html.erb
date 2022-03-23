@@ -1,55 +1,40 @@
 
 <div class="container mt-5 text-white">
-  <div class="row">
-    <div class="col-2">
-    </div>
-    <div class="col-8">
-        <table class="table">
-  <thead class="text-white">
-    <tr class="text-white">
-      <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
-      <th scope="col">Email</th>
-      <th scope="col">Hora</th>
-      <th scope="col">Dia</th>
+      <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+          <h1 class="text-white mb-4">Santa Reservas: </h1>
+            <% @reserves.each do |reserve|%>
+            <table class="text-white text-center">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>People</th>
+                  <th colspan="1"></th>
+                </tr>
+              </thead>
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="text-white">
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-
-    </tr>
-        <tr class="text-white">
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-
-    </tr>
-        <tr  class="text-white">
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-
-  </tbody>
-</table>
-    </div>
-    <div class="col-2">
-    </div>
-  </div>
+              <tbody>
+                <% @reserves.each do |reserve| %>
+                  <tr>
+                    <td><%= reserve.date %></td>
+                    <td><%= reserve.time %></td>
+                    <td><%= reserve.people %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <% end %>
+        </div>
+        <div class="col-4">
+        </div>
+      </div>
 </div>
 
-<%= link_to 'Home', root_path %>
+
+<%= link_to 'Volver', root_path, :class => 'text-white' %>
+
 
 
